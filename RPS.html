@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+
+
+function game(){
+  var player = prompt("Please enter Rock, Paper, or Scissors");
+  player = player.toUpperCase();
+  var computer = Math.floor((Math.random() * 9) + 1);
+
+  //alert (playchoice);
+  if(computer >= 3 && computer < 4){
+    computer = "ROCK";
+  }
+  else if(computer >= 4 && computer < 7){
+    computer = "SCISSORS"
+  }
+  else {
+    computer = "PAPER";
+  };
+
+  alert ("Hal 9000 picks  " + computer);
+
+  console.log(player);
+  console.log(computer);
+  //Test to see if prompt and computer choices work
+
+
+
+  var response;
+
+if(player=="ROCK"){
+
+  if(computer=="PAPER"){
+
+  response = "I am afraid I can't do that Dave. Paper Wins!!";
+  }
+  if(computer=="SCISSORS"){
+
+  response = "HAL, I won't argue with you anymore! Rock over Scissors";
+  }
+
+}
+
+if(player=="PAPER"){
+    if(computer=="ROCK"){
+
+    response = "HAL, I won't argue with you anymore! Paper over Rock!";
+    }
+   if(computer=="SCISSORS"){
+    response = "I am afraid I can't do that Dave. Scissors over Paper Wins!!";;
+    }
+}
+
+  if(player=="SCISSORS"){
+    if(computer=="PAPER"){
+
+    response = "HAL, I won't argue with you anymore! Scissors Wins!!";
+    }
+     if(computer=="ROCK"){
+    response = "I am afraid I can't do that Dave. Rock Wins!!";
+    }
+      }
+
+    if (player==computer){
+    response = "This game is Tie";
+
+    }
+    if(player===null){
+      response = "Stop";
+    }
+console.log(response);
+    return (response);
+
+}
+
+while(decision!="Stop"){
+
+if (decision=="Stop"){
+  break;
+}
+
+var decision = game();
+window.alert(decision);
+}
+
+</script>
+</body>
+<html>
