@@ -1,0 +1,29 @@
+{
+"games": [{
+ "title":"Mass Effect",
+ "genre":"RPG",
+ "Release":2003,
+ "Website":"https://www.masseffect.com/"
+},
+
+{
+  "title":"BioShock",
+  "genre":"Shooter",
+  "Release":2008,
+  "Website":"https://www.2kgames.com/bioshock/"
+},
+{
+  "title":"The Witcher 3",
+  "genre":"RPG",
+  "Release":2015,
+  "Website":"https://thewitcher.com/en/witcher3"
+},
+{
+  "title":"Ratchet & Clank",
+  "genre":"Platformer",
+  "Release":2005,
+  "Website":"https://www.playstation.com/en-us/games/ratchet-and-clank-ps4/3"
+}
+
+]
+}
