@@ -1,0 +1,236 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>JavaScript Test Page</title>
+        <script type="text/JavaScript">
+//constructor function
+function games(title,genre,rating,price){
+this.title=title;
+this.genre = genre;
+this.rating = rating;
+this.price = price;
+this.info = function(){return "This game title is " + this.title + " and it is an "+ this.genre};
+
+}
+
+var xboxGames = [
+    new games  ("Witcher 3","RPG","M",60),
+    new games  ("Mass Effect","RPG","M",76),
+    new games ("Read Dead","SandBox","M",100)
+];
+
+console.log(xboxGames[2].info());
+
+var xboxGames2 = xboxGames.reverse();
+
+console.log(xboxGames2);
+
+function sort_xbox(){
+return xboxGames.sort();
+}
+console.log(sort_xbox(xboxGames.price));
+
+var s = xboxGames.sort();
+console.log(s);
+
+xboxGames.sort(function(a, b){
+    if(a.title < b.title) { return -1; }
+    if(a.title > b.title) { return 1; }
+    return 0;
+})
+//html request
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+      // document.getElementById("demo").innerHTML = xhttp.responseText;
+    var response = JSON.parse (xhttp.responseText);
+    console.log(response.people);
+    var people = response.people;
+    
+    var output= '';
+   for (var i =0;i < people.length;i++){
+       output += '<li>' +people[i].fname+'</li>';
+   }
+  document.getElementById('people').innerHTML = output;
+    }
+};
+xhttp.open("GET", "people.json", true);
+xhttp.send();
+
+//constructor function
+function games(title,date,genre){
+
+this.title=title;
+this.date =date;
+this.genre =genre;
+this.allto = function(){return this.title + " and this game came out " + this.date + " many consider it to be a " + this.genre + "."
+
+}
+}
+
+var xbox_games = [
+    new games("mass effect",45,"RPG/Shooter"),
+    new games("Witcher3",50,"RPG")
+];
+
+let gr = xbox_games.reverse();
+let f = xbox_games[0].genre
+console.log(xbox_games);
+console.log(gr);
+console.log(xbox_games[1].title);
+console.log(xbox_games.isPrototypeOf());
+console.log(xbox_games[1].allto());
+ 
+var str;
+function type(str){
+     var x = typeof str;
+     return x;
+ }
+ console.log(type(false));
+  
+//recursion of number!!!
+let countDown =(a)=> {
+if(a ==0) return;
+console.log(a)
+countDown(a-1)
+}
+
+countDown(25);
+
+//recusrion of string!!
+let reverse_string=(str)=>{
+if(str===""){
+    return str;
+} 
+else{
+return reverse_string(str.substr(1)) + str.charAt(0);
+}
+}
+console.log(reverse_string("clay"));
+
+
+//function with prototype
+ function reverse_numb (numb){
+    if(numb>0){
+        return reverse_numb(numb/10) + numb%10;
+    }
+
+
+}
+
+console.log(reverse_numb(987));
+
+function tp(a){
+    console.log(a)
+}
+console.log(tp(45)); 
+
+
+
+
+
+function person(fisrtname,lastname,weight){
+this.fisrtname = fisrtname;
+this.lastname =lastname;
+this.weight = weight;
+this.fullname = function(){
+    return this.fisrtname + " " + this.lastname;
+}
+
+};
+
+let fete =[
+new person("Clayton","Fete",165),
+new person("Dan","Smith",235)
+]
+
+console.log(fete[0].fullname());
+
+fete[0].prototype.address = "7 potomac";
+console.log(fete[0]);
+
+
+var car = {type:"Fiat", model:"500", color:"white"};
+console.log(car);
+car.drive ="4 wheel";
+console.log(car);
+
+
+function person(fisrtname,lastname,weight){
+this.fisrtname = fisrtname;
+this.lastname =lastname;
+this.weight = weight;
+this.fullname = function(){
+    return this.fisrtname + " " + this.lastname;
+}
+
+};
+
+let fete =[
+new person("Clayton","Fete",165),
+new person("Dan","Smith",235)
+]
+
+console.log(fete[0].fullname());
+
+fete[0].address = "7 potomac";
+console.log(fete[0]);
+console.log(fete[0].prototypeaddress);
+
+console.log(fete[1]);
+
+let firstInteger = 4;
+ let  firstDecimal = parseInt(4.0);
+    let b = firstDecimal + firstInteger;
+    console.log(b);
+    */
+
+let compt = Math.floor(Math.random()*8);
+let du;
+console.log(compt);
+
+
+switch(true){
+    case (compt <= 2):
+    du = "Rock"
+    break;
+    case (compt >=3 && compt <=5):
+    du = "Paper"
+    break;
+    case (compt>=6):
+    du = "Scissors"
+    break;
+    default:
+    du =20;
+    break;
+
+}
+
+console.log(du);
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+
+</body>
+
+
+
+</html>
+
+
+</DOCTYPE>
